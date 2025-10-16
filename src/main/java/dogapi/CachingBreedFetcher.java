@@ -27,6 +27,7 @@ public class CachingBreedFetcher implements BreedFetcher {
             this.callsMade++;
         }
         catch(BreedNotFoundException e) {
+            this.callsMade++;
             throw new BreedNotFoundException("No such breed");
         }
         return new ArrayList<>();
