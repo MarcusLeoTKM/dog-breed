@@ -48,11 +48,11 @@ public class DogApiBreedFetcher implements BreedFetcher {
                 return breedList;
             }
             else {
-                throw new BreedNotFoundException("No such breed");
+                throw new BreedNotFoundException(breed);
             }
         }
         catch (Exception e) {
-            throw new RuntimeException(e);
+            throw new BreedNotFoundException(breed);
         }
     }
 }
